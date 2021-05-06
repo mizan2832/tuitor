@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('front.pages.index');
 });
 Route::get('job', function () {
-    return view('front.tuition_job');
+    return view('front.pages.tuition_job');
 });

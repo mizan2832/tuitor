@@ -175,7 +175,11 @@
                 <!-- Side widget-->
                 <div class="card my-4">
                     <h5 class="card-header">Category</h5>
-                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!</div>
+                    <div class="card-body">
+                       
+                            <button type="button" class="btn btn-outline-dark btn-sm">Primary</button>
+                      
+                    </div>
                 </div>
             </div>
         </div>
