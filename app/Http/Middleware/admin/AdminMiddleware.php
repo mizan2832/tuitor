@@ -15,6 +15,11 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if(auth()->user()->is_admin == 1){
+            return $next($request);
+        }
+   
+        return redirect('front.pages.index')->with('error',"Only admin can access!");
     }
+    
 }
