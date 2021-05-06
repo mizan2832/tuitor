@@ -25,6 +25,12 @@ class DatabaseSeeder extends Seeder
                 'is_admin'=>'0',
                'password'=> bcrypt('07070707'),
             ],
+            [
+               'name'=>'Teacher',
+               'email'=>'teacher@gmail.com',
+                'is_tuitor'=>'2',
+               'password'=> bcrypt('07070707'),
+            ],
         ];
   
         foreach ($userData as $key => $val) {

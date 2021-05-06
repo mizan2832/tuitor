@@ -30,4 +30,8 @@ class HomeController extends Controller
     {
         return view('backend.master');
     }
+    public function handleTuitor()
+    {
+        return view('backend.tuitor');
+    }
 }
