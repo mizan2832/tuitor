@@ -18,7 +18,7 @@ Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->mid
 Route::get('/tuitor', 'HomeController@handleTuitor')->name('tuitor.route')->middleware('tuitor');
 
 Route::get('/', function () {
-    return view('home');
+    return view('front.pages.index');
 });
 Route::get('job', function () {
     return view('front.pages.tuition_job');

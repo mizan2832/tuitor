@@ -34,12 +34,16 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Request For a Tutor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Find Tutor</a></li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Premium Tutors</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('job') }}">Tuitions Job</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">E-Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">How it works</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                    @if (Route::has('register'))
+                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                    @endif
+
                 </ul>
             </div>
         </div>
