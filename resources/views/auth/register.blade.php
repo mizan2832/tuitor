@@ -30,43 +30,36 @@
           <input placeholder="Enter your Email" oninput="this.className = ''" name="femail">
           <p>Password:</p>
           <input placeholder="Enter your password" oninput="this.className = ''" name="femail">
+      
           <p>Password Confirmation:</p>
           <input placeholder="Retype your password" oninput="this.className = ''" name="femail">
 
-        </div>
-        <div class="tab">
+
           <h1>Personal Information</h1>
-          <div class="row col-md-12">
+          <div class="row ">
               <div class="col-md-6">
-                <div class="form-group">
-                  <label for="pwd">Your Current Institution:</label>
-                  <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-                </div>
+                  <p>Phone Number:</p>
+                  <input placeholder="Enter your phone number" oninput="this.className = ''" name="fnumber">
               </div>
               <div class="col-md-6">
-                <div class="form-group">
-                  <label for="pwd">Name of the Subject you are studding on:</label>
-                  <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-                </div>
+                  <p>Name of the Subject you are studding on:</p>
+                  <input placeholder="Enter your subject" oninput="this.className = ''" name="fnumber">
               </div>
           </div>
 
-          <div class="row col-md-12">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="pwd">Your Highest Qualification:</label>
-                <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+          <div class="row ">
+              <div class="col-md-6">
+                  <p>Your Highest Qualification:</p>
+                  <input placeholder="Enter your qualification" oninput="this.className = ''" name="fnumber">
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="pwd">Background Medium:</label>
-                <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-              </div>
-            </div>
+              <div class="col-md-6">
+                  <p>Background Medium:</p>
+                  <input placeholder="Enter your qualification" oninput="this.className = ''" name="fnumber">
+
+                </div>
         </div>
 
-        <div class="row col-md-12">
+        <div class="row ">
           <div class="col-md-6">
             <div class="form-group">
               <label for="pwd">Your Current Institution:</label>
@@ -81,55 +74,42 @@
             </div>
           </div>
       </div>
-      <div class="row col-md-12">
-        <label for="pwd">Your SSC/O-level information:</label> <br>
-        <div class="col-md-3"><input type="Year"></div>
-        <div class="col-md-3"><input type="Institute"></div>
-        <div class="col-md-3"><input type="Group"></div>
-        <div class="col-md-3"><input type="GPA"></div>
+      <label for="pwd">Your SSC/O-level information:</label> <br>
+      <div class="row ">
+        <div class="col-sm-3"><input type="Year"></div>
+        <div class="col-sm-3"><input type="Institute"></div>
+        <div class="col-sm-3"><input type="Group"></div>
+        <div class="col-sm-3"><input type="GPA"></div>
       </div>
-      <div class="row col-md-12">
-        <label for="pwd">Your HSC/A-level information:</label><br>
-        <div class="col-md-3"><input type="Year"></div>
-        <div class="col-md-3"><input type="Institute"></div>
-        <div class="col-md-3"><input type="Group"></div>
-        <div class="col-md-3"><input type="GPA"></div>
+      <label for="pwd">Your HSC/A-level information:</label><br>
+      <div class="row">
+        <div class="col-sm-3"><input type="Year"></div>
+        <div class="col-sm-3"><input type="Institute"></div>
+        <div class="col-sm-3"><input type="Group"></div>
+        <div class="col-sm-3"><input type="GPA"></div>
       </div>
-      <div class="row col-md-12">
-        <label for="pwd">Your Honours information:</label><br>
-        <div class="col-md-3"><input type="Year"></div>
-        <div class="col-md-3"><input type="Institute"></div>
-        <div class="col-md-3"><input type="Group"></div>
-        <div class="col-md-3"><input type="GPA"></div>
+      <label for="pwd">Your Honours information:</label><br>
+      <div class="row">
+        <div class="col-sm-3"><input type="Year"></div>
+        <div class="col-sm-3"><input type="Institute"></div>
+        <div class="col-sm-3"><input type="Group"></div>
+        <div class="col-sm-3"><input type="GPA"></div>
       </div>
-      <div class="col-md-12">
-        <label for="pwd">Your Honours information:</label>
-         <textarea name="about_yourself" class="form-control" title="Write about yourself"></textarea>
+      <label for="pwd">Your Honours information:</label>
+      <div class="row">
+        <div class="col-sm-12">
+          <textarea name="about_yourself" class="form-control" title="Write about yourself"></textarea>
+       </div>
       </div>
+
           
+
+        </div>
+        <div class="tab">
+      
           
         </div>
-        <div class="tab">Birthday:
-          <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-          <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-          <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-        </div>
-        <div class="tab">Login Info:
-          <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-          <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-        </div>
-        <div style="overflow:auto;">
-          <div style="float:right;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-          </div>
-        </div>
-        <!-- Circles which indicates the steps of the form: -->
-        <div style="text-align:center;margin-top:40px;">
-          <span class="step"></span>
-          <span class="step"></span>
-          <span class="step"></span>
-          <span class="step"></span>
+        <div class="tab">
         </div>
       </form>
 </div>
