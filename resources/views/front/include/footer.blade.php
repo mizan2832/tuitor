@@ -120,3 +120,5 @@ Essential Scripts
 
 <script src="novena/js/script.js"></script>
 <script src="novena/contact.js"></script>
+
+@stack('js')
