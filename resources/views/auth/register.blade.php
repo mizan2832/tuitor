@@ -1,21 +1,113 @@
 @extends('front.master')
 @push('css')
 <link rel="stylesheet" href="css/registration.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/regis.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+>
+
 
 @endpush
 @section('content')
 <!-- MultiStep Form -->
 <div class="container">
     <form id="regForm" action="/action_page.php">
-        <h1>Register As a Tutor</h1>
+        
         <!-- One "tab" for each step in the form: -->
-        <div class="tab">Full Name:
-          <p><input placeholder="Enter your full name" oninput="this.className = ''" name="fname"></p>
+        <div class="tab">
+          <h1>Register As a Tutor</h1>
+          <p>Full Name:</p>
+          <input placeholder="Enter your full name" oninput="this.className = ''" name="fname">
+            <p>Select Gender</p>           
+             <div class="btn-group">   
+                 <button type="button" class="btn btn-primary"><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Male</button>
+            </div>
+            <div class="btn-group">   
+                 <button type="button" class="btn btn-primary"><span><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Female</button>
+            </div>
+          <p>Phone Number:</p>
+          <input placeholder="Enter your phone number" oninput="this.className = ''" name="fnumber">
+          <p>Email Address:</p>
+          <input placeholder="Enter your Email" oninput="this.className = ''" name="femail">
+          <p>Password:</p>
+          <input placeholder="Enter your password" oninput="this.className = ''" name="femail">
+          <p>Password Confirmation:</p>
+          <input placeholder="Retype your password" oninput="this.className = ''" name="femail">
+
         </div>
-        <div class="tab">Select Gender:
-          <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-          <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+        <div class="tab">
+          <h1>Personal Information</h1>
+          <div class="row col-md-12">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="pwd">Your Current Institution:</label>
+                  <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="pwd">Name of the Subject you are studding on:</label>
+                  <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                </div>
+              </div>
+          </div>
+
+          <div class="row col-md-12">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="pwd">Your Highest Qualification:</label>
+                <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="pwd">Background Medium:</label>
+                <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+              </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="pwd">Your Current Institution:</label>
+              <textarea name="institution" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="pwd">Name of the Subject you are studding on:</label>
+              <textarea name="subject" class="form-control" id=""></textarea>
+
+            </div>
+          </div>
+      </div>
+      <div class="row col-md-12">
+        <label for="pwd">Your SSC/O-level information:</label> <br>
+        <div class="col-md-3"><input type="Year"></div>
+        <div class="col-md-3"><input type="Institute"></div>
+        <div class="col-md-3"><input type="Group"></div>
+        <div class="col-md-3"><input type="GPA"></div>
+      </div>
+      <div class="row col-md-12">
+        <label for="pwd">Your HSC/A-level information:</label><br>
+        <div class="col-md-3"><input type="Year"></div>
+        <div class="col-md-3"><input type="Institute"></div>
+        <div class="col-md-3"><input type="Group"></div>
+        <div class="col-md-3"><input type="GPA"></div>
+      </div>
+      <div class="row col-md-12">
+        <label for="pwd">Your Honours information:</label><br>
+        <div class="col-md-3"><input type="Year"></div>
+        <div class="col-md-3"><input type="Institute"></div>
+        <div class="col-md-3"><input type="Group"></div>
+        <div class="col-md-3"><input type="GPA"></div>
+      </div>
+      <div class="col-md-12">
+        <label for="pwd">Your Honours information:</label>
+         <textarea name="about_yourself" class="form-control" title="Write about yourself"></textarea>
+      </div>
+          
+          
         </div>
         <div class="tab">Birthday:
           <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
