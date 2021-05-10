@@ -16,7 +16,7 @@
         <div class="tab">
           <h1>Register As a Tutor</h1>
           <p>Full Name:</p>
-          <input placeholder="Enter your full name" oninput="this.className = ''" name="fname">
+          <input placeholder="Enter your full name"  name="user_name">
             <p>Select Gender</p>           
              <div class="btn-group">   
                  <button type="button" class="btn btn-primary"><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Male</button>
@@ -25,84 +25,190 @@
                  <button type="button" class="btn btn-primary"><span><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Female</button>
             </div>
           <p>Phone Number:</p>
-          <input placeholder="Enter your phone number" oninput="this.className = ''" name="fnumber">
+          <input placeholder="Enter your phone number"  name="phone_number">
           <p>Email Address:</p>
-          <input placeholder="Enter your Email" oninput="this.className = ''" name="femail">
+          <input placeholder="Enter your Email" oninput="this.className = ''" name="email">
           <p>Password:</p>
-          <input placeholder="Enter your password" oninput="this.className = ''" name="femail">
+          <input placeholder="Enter your password" oninput="this.className = ''" name="password">
       
           <p>Password Confirmation:</p>
-          <input placeholder="Retype your password" oninput="this.className = ''" name="femail">
+          <input placeholder="Retype your password"  name="password">
 
 
           <h1>Personal Information</h1>
           <div class="row ">
               <div class="col-md-6">
-                  <p>Phone Number:</p>
-                  <input placeholder="Enter your phone number" oninput="this.className = ''" name="fnumber">
+                  <p>Your Current Institution:</p>
+                  <input placeholder="Your current institution"  name="your institution">
               </div>
               <div class="col-md-6">
                   <p>Name of the Subject you are studding on:</p>
-                  <input placeholder="Enter your subject" oninput="this.className = ''" name="fnumber">
+                  <input placeholder="Enter your subject" name="subject">
               </div>
           </div>
 
           <div class="row ">
               <div class="col-md-6">
                   <p>Your Highest Qualification:</p>
-                  <input placeholder="Enter your qualification" oninput="this.className = ''" name="fnumber">
+                  <input placeholder="Enter your qualification" name="qualification">
               </div>
               <div class="col-md-6">
                   <p>Background Medium:</p>
-                  <input placeholder="Enter your qualification" oninput="this.className = ''" name="fnumber">
+                  <div class="form-group">
+                    <select class="form-control" id="sel1" name="medium">
+                      <option>Bangla Medium</option>
+                      <option>English Medium</option>
+                    </select>
+                  </div>
 
                 </div>
         </div>
 
-        <div class="row ">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="pwd">Your Current Institution:</label>
-              <textarea name="institution" class="form-control"></textarea>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="pwd">Name of the Subject you are studding on:</label>
-              <textarea name="subject" class="form-control" id=""></textarea>
-
-            </div>
-          </div>
-      </div>
       <label for="pwd">Your SSC/O-level information:</label> <br>
       <div class="row ">
-        <div class="col-sm-3"><input type="Year"></div>
-        <div class="col-sm-3"><input type="Institute"></div>
-        <div class="col-sm-3"><input type="Group"></div>
-        <div class="col-sm-3"><input type="GPA"></div>
+        <div class="col-sm-3"><input type="text" name="ssc_year"></div>
+        <div class="col-sm-3"><input type="text" name="ssc_institution"></div>
+        <div class="col-sm-3"><input type="text" name="ssc_group"></div>
+        <div class="col-sm-3"><input type="text" name="ssc_gpa"></div>
       </div>
       <label for="pwd">Your HSC/A-level information:</label><br>
       <div class="row">
-        <div class="col-sm-3"><input type="Year"></div>
-        <div class="col-sm-3"><input type="Institute"></div>
-        <div class="col-sm-3"><input type="Group"></div>
-        <div class="col-sm-3"><input type="GPA"></div>
+        <div class="col-sm-3"><input type="text" name="hsc_year"></div>
+        <div class="col-sm-3"><input type="text" name="hsc_institution"></div>
+        <div class="col-sm-3"><input type="text" name="hsc_group"></div>
+        <div class="col-sm-3"><input type="text" name="hsc_gpa"></div>
       </div>
       <label for="pwd">Your Honours information:</label><br>
       <div class="row">
-        <div class="col-sm-3"><input type="Year"></div>
-        <div class="col-sm-3"><input type="Institute"></div>
-        <div class="col-sm-3"><input type="Group"></div>
-        <div class="col-sm-3"><input type="GPA"></div>
+        <div class="col-sm-3"><input type="text" name="honours_year"></div>
+        <div class="col-sm-3"><input type="text" name="honours_institution"></div>
+        <div class="col-sm-3"><input type="text" name="honours_subject"></div>
+        <div class="col-sm-3"><input type="text" name="honours_gpa"></div>
       </div>
-      <label for="pwd">Your Honours information:</label>
+      <label for="pwd">About Yourself:</label>
       <div class="row">
         <div class="col-sm-12">
           <textarea name="about_yourself" class="form-control" title="Write about yourself"></textarea>
        </div>
       </div>
 
-          
+    <h1>Tuition information</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Districts:</p>
+            <div class="form-group">
+              <select class="form-control" id="sel1">
+                <option>Select Your District:</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <p>Select your preferred area:</p>
+          <div class="form-group">
+            <select class="form-control" id="sel1">
+              <option>Select Your District:</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+        <p>Select Medium:</p>
+        <div class="form-group">
+          <select class="form-control" id="sel1">
+            <option>Bangla Medium</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <p> Preferred Classes:</p>
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+      <p>Preferred Subjects:</p>
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <p> Day per Week:</p>
+    <div class="form-group">
+      <select class="form-control" id="sel1">
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+      <p>Timing Shift:</p>
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <p> Expected Salary:</p>
+    <div class="form-group">
+      <select class="form-control" id="sel1">
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <p>Preferred Tuitoring Style:</p>
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+  </div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <p>Experience:</p>
+      <textarea name="" title="Your Experience" class="form-control"></textarea>
+      
+  </div>
+  
+</div>
+
 
         </div>
         <div class="tab">

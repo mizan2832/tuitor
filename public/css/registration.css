@@ -76,3 +76,9 @@ button:hover {
 .prso {
     width: 200px;
 }
+
+@media screen and (max-width:574) {
+    .shstyle {
+        margin-top: 10px;
+    }
+}
