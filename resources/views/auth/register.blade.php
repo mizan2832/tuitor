@@ -3,9 +3,6 @@
 <link rel="stylesheet" href="css/registration.css">
 <script src="js/regis.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
->
-
-
 @endpush
 @section('content')
 <!-- MultiStep Form -->
@@ -19,10 +16,8 @@
           <input placeholder="Enter your full name"  name="user_name">
             <p>Select Gender</p>           
              <div class="btn-group">   
-                 <button type="button" class="btn btn-primary"><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Male</button>
-            </div>
-            <div class="btn-group">   
-                 <button type="button" class="btn btn-primary"><span><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Female</button>
+                 <button type="button"  value="m"  class="btn btn-primary male"><i style="display: none;" class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Male</button>  
+                 <button type="button"  value="f"  class="btn btn-primary male"><span><i style="display: none;" class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Female</button>
             </div>
           <p>Phone Number:</p>
           <input placeholder="Enter your phone number"  name="phone_number">
@@ -33,8 +28,6 @@
       
           <p>Password Confirmation:</p>
           <input placeholder="Retype your password"  name="password">
-
-
           <h1>Personal Information</h1>
           <div class="row ">
               <div class="col-md-6">
@@ -65,21 +58,21 @@
         </div>
 
       <label for="pwd">Your SSC/O-level information:</label> <br>
-      <div class="row ">
+      <div class="row ssc">
         <div class="col-sm-3"><input type="text" name="ssc_year"></div>
         <div class="col-sm-3"><input type="text" name="ssc_institution"></div>
         <div class="col-sm-3"><input type="text" name="ssc_group"></div>
         <div class="col-sm-3"><input type="text" name="ssc_gpa"></div>
       </div>
       <label for="pwd">Your HSC/A-level information:</label><br>
-      <div class="row">
+      <div class="row hsc">
         <div class="col-sm-3"><input type="text" name="hsc_year"></div>
         <div class="col-sm-3"><input type="text" name="hsc_institution"></div>
         <div class="col-sm-3"><input type="text" name="hsc_group"></div>
         <div class="col-sm-3"><input type="text" name="hsc_gpa"></div>
       </div>
       <label for="pwd">Your Honours information:</label><br>
-      <div class="row">
+      <div class="row honours">
         <div class="col-sm-3"><input type="text" name="honours_year"></div>
         <div class="col-sm-3"><input type="text" name="honours_institution"></div>
         <div class="col-sm-3"><input type="text" name="honours_subject"></div>
@@ -295,6 +288,9 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class on the current step:
   x[n].className += " active";
+}
+function male(){
+ 
 }
     </script>
 @endpush            

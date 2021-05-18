@@ -77,8 +77,20 @@ button:hover {
     width: 200px;
 }
 
-@media screen and (max-width:574) {
-    .shstyle {
+.male:active {
+    background-color: black;
+}
+
+@media screen and (max-width:574px) {
+    .ssc input {
+        margin-top: 10px;
+    }
+    .hsc input {
+        margin-top: 10px;
+    }
+    .honours input {
         margin-top: 10px;
     }
 }
+
+@media screen and (max-width:) {}
