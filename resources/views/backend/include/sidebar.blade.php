@@ -15,12 +15,17 @@
                     <a href="#">
                         <i class="metismenu-icon pe-7s-diamond"></i>
                         Tuitor List
-                        <i class="metismenu-state-icon pe-7s-angle-down"></i>
+                        <i class="metismenu-state-ico"></i>
                     </a>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-diamond"></i>
                         Tuitor Payment
-                        <i class="metismenu-state-icon pe-7s-angle-down"></i>
+                        <i class="metismenu-state-ico"></i>
+                    </a>
+                    <a href="">
+                        <i class="metismenu-icon pe-7s-diamond"></i>
+                        Add Tuition
+                        <i class="metismenu-state-ico"></i>
                     </a>
                     
                 </li>

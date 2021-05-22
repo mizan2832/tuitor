@@ -32,6 +32,6 @@ class HomeController extends Controller
     }
     public function handleTuitor()
     {
-        return view('backend.tuitor');
+        return view('front.pages.index');
     }
 }

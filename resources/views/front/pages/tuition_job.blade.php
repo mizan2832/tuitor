@@ -1,6 +1,6 @@
 @extends('front.master')
 @section('content')
-    <<div class="container">
+    <div class="tui_con container">
         <div class="row">
             <!-- Blog entries-->
             <div class="col-md-8">
@@ -9,79 +9,32 @@
                     <small>Job</small>
                 </h1>
                 <!-- Blog post-->
-                <div class="card" style="color: black">
+                <div class="card mb-2" style="color: black"  >
                     <div class="card-header">Need a Female Tuitor for A level Student</div>
-                    <div class="card-body">
-                      
-                         <div class="row col-md-12 m-0">
-                             <div class="col-md-4">Category:Male</div>
-                             <div class="col-md-4" style="margin-left: -20px;">Class:</div>
-                             <div class="col-md-4 text-center">Salary:1241</div>
+                    <div class="card-body" style="line-height:1.6">
+                         <div class="row">  
+                                <div class="col-sm-4">Category:Male</div>
+                                <div class="col-sm-4">Class:six</div>
+                                <div class="col-sm-4">Salary:1241</div>
                          </div>
-                         <p>Subjects:Bangla,Math,Physics</p>
-                         <p>5days</p>
-                         <p>Requirments</p>
+                         <div class="row">  
+                                <div class="col-sm-8">Subjects:Bangla,Math,Physics</div>
+                                <div class="col-sm-4">Duration:5days </div>
+                                
+                         </div>
+                         <p> Requirements:</p>
+                       <button class="btn btn-success">Details</button>
                         
                     </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2021 
-                    </div>
-                </div>
-                <div class="card mb-30">
-                    <div class="card-header">Need a Female Tuitor for A level Student</div>
-                    <div class="card-body">
-                      
-                         <div class="row col-md-12 m-0">
-                             <div class="col-md-4">Category:Male</div>
-                             <div class="col-md-4" style="margin-left: -20px;">Class:</div>
-                             <div class="col-md-4 text-center">Salary:1241</div>
-                         </div>
-                         <p>Subjects:Bangla,Math,Physics</p>
-                         <p>5days</p>
-                         <p>Requirments</p>
-                        
-                    </div>
-                    <div class="card-footer text-muted">
+                    <div class="card-footer text-muted" style="color: black">
                         Posted on January 1, 2021 
                     </div>
                 </div>
 
-                <div class="card ">
-                    <div class="card-header">Need a Female Tuitor for A level Student</div>
-                    <div class="card-body">
-                      
-                         <div class="row col-md-12 m-0">
-                             <div class="col-md-4">Category:Male</div>
-                             <div class="col-md-4" style="margin-left: -20px;">Class:</div>
-                             <div class="col-md-4 text-center">Salary:1241</div>
-                         </div>
-                         <p>Subjects:Bangla,Math,Physics</p>
-                         <p>5days</p>
-                         <p>Requirments</p>
-                        
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2021 
-                    </div>
-                </div>
-                <div class="card ">
-                    <div class="card-header">Need a Female Tuitor for A level Student</div>
-                    <div class="card-body">
-                      
-                         <div class="row col-md-12 m-0">
-                             <div class="col-md-4">Category:Male</div>
-                             <div class="col-md-4" style="margin-left: -20px;">Class:</div>
-                             <div class="col-md-4 text-center">Salary:1241</div>
-                         </div>
-                         <p>Subjects:Bangla,Math,Physics</p>
-                         <p>5days</p>
-                         <p>Requirments</p>
-                        
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2021 
-                    </div>
-                </div>
+                
+            
+
+             
                 <!-- Blog post-->
                
                 <!-- Pagination-->

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware\admin;
-
+use Auth;
 use Closure;
 
 class AdminMiddleware
@@ -15,11 +15,15 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user()->is_admin == 1){
+        
+        if (Auth::check() && Auth::user()->is_admin == 1)
+        {
             return $next($request);
+        } else {
+            return redirect()->route('home');
         }
-   
-        return redirect('front.pages.index')->with('error',"Only admin can access!");
     }
+   
+    
     
 }

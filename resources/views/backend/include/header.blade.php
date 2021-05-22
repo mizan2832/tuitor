@@ -51,13 +51,32 @@
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-
+                        <a href="{{ url('job') }}"><button class="btn btn-info">Go to Tuition</button></a>
+                        
+                    
                         <div class="widget-content-left  ml-3 header-user-info">
                             <div class="widget-heading">
                                 {{ Auth::user()->name }}
                             </div>
                             <div class="widget-subheading">
                                 VP People Manager
+                            </div>
+                        </div>
+                        <div class="widget-content-left">
+                            <div class="btn-group">
+                                <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                                    <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                    <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                </a>
+                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                    <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                     <a href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();"><button type="button" tabindex="0" class="dropdown-item">Logout</button></a>
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                 
+                                </div>
                             </div>
                         </div>
                         <div class="widget-content-right header-user-info ml-3">
