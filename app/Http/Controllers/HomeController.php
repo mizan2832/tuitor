@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function handleAdmin()
     {
-        return view('backend.master');
+        return view('backend.pages.index');
     }
     public function handleTuitor()
     {

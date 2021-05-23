@@ -15,7 +15,16 @@ class CreateTuitionsTable extends Migration
     {
         Schema::create('tuitions', function (Blueprint $table) {
             $table->id();
-            
+            $table->String('gender');
+            $table->String('class');
+            $table->String('medium');
+            $table->String('subject');
+            $table->String('preferred_tuition');
+            $table->String('tuitoring_time');
+            $table->String('tuitoring_days');
+            $table->String('no_of_students');
+            $table->String('salary');
+            $table->String('location');
             $table->timestamps();
         });
     }

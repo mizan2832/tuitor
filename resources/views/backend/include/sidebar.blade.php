@@ -22,7 +22,7 @@
                         Tuitor Payment
                         <i class="metismenu-state-ico"></i>
                     </a>
-                    <a href="">
+                    <a href="{{ route('tuition.create') }}">
                         <i class="metismenu-icon pe-7s-diamond"></i>
                         Add Tuition
                         <i class="metismenu-state-ico"></i>
