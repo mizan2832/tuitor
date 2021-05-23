@@ -29,28 +29,54 @@
         </div>
     </div>
 
-    
-    <table id='tuitionTable' width='100%' border="1" style='border-collapse: collapse;'>
+    <div class="container">
+             
+      <table class="table table-striped">
         <thead>
           <tr>
-            <td>S.no</td>
-            <td>Gender</td>
-            <td>Class</td>
-            <td>Medium</td>
-            <td>Subject</td>
-            <td>Preferred Tuitor</td>
-            <td>Tuitoring Time</td>
-            <td>Tuitoring Days</td>
-            <td>Total students</td>
-            <td>Salary</td>
-            <td>Location</td>
+            <th>S.no</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Medium</th>
+            <th>Subject</th>
+            <th>Preferred Tuitor</th>
+            <th>Tuitoring Time</th>
+            <th>Tuitoring Days</th>
+            <th>Total students</th>
+            <th>Salary</th>
+            <th>Location</th>
+            <th>Action</th>
           </tr>
         </thead>
+        <tbody>
+          @foreach ($alltuitions as $key=>$tuition)
+          <tr>
+            <td>{{ $key+1 }}</td>
+            <td>{{ $tuition->gender }}</td>
+            <td>{{ $tuition->class }}</td>
+            <td>{{ $tuition->medium }}</td>
+            <td>{{ $tuition->subject }}</td>
+            <td>{{ $tuition->preferred_tuition }}</td>
+            <td>{{ $tuition->tuitoring_time }}</td>
+            <td>{{ $tuition->tuitoring_days }}</td>
+            <td>{{ $tuition->no_of_students }}</td>
+            <td>{{ $tuition->salary }}</td>
+            <td>{{ $tuition->location }}</td>
+            <td><button class="btn btn-info btn-sm">Edit</button> <button class="btn btn-danger btn-sm">Delete</button></td>
+          </tr>
+          @endforeach
+
+          
+        </tbody>
       </table>
+    </div>
+
+    
+   
 
 </div>
 @endsection
-@push('script')
+{{-- @push('script')
 <script type="text/javascript">
     $(document).ready(function(){
 
@@ -76,4 +102,4 @@
 
     });
     </script>
-@endpush
+@endpush --}}
