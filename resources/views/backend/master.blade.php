@@ -11,6 +11,7 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
 <link href="/backend/main.css" rel="stylesheet">
+ @stack('js_css')
 </head>
 <body>
 
@@ -28,4 +29,5 @@
         </div>
     </div>
 <script type="text/javascript" src="/backend/assets/scripts/main.js"></script></body>
+@stack('script')
 </html>

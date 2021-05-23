@@ -12,7 +12,7 @@
                 </li>
                 <li class="app-sidebar__heading">Tuitor</li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('tuition.index') }}">
                         <i class="metismenu-icon pe-7s-diamond"></i>
                         Tuitor List
                         <i class="metismenu-state-ico"></i>

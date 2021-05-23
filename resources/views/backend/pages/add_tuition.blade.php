@@ -38,10 +38,10 @@
                     <div class="col-md-4 mb-3">
                        <label for="validationCustom03">Select Student Medium</label>
                         <select name="medium" class="form-control" value="{{ old('medium') }}" id="validationCustom03" required>
-                            <option value="bangla_medium">Bangla Medium</option>
-                            <option value="english_medium">English Medium</option>
-                            <option value="english_version">English Version</option>
-                            <option value="arbi">Arbi</option>
+                            <option value="0">Bangla Medium</option>
+                            <option value="1">English Medium</option>
+                            <option value="2">English Version</option>
+                            <option value="3">Arbi</option>
                         </select>
                     </div>
                 </div>

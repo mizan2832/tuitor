@@ -26,7 +26,7 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('tuition', 'TuitionController');
 });
 
-
+Route::get('all_tuition','TuitionController@getTuitions')->name('all_tuition')->middleware('admin');
 
 
 
