@@ -10,6 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Datatables JS CDN -->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
 @endpush
 @section('content')
 <div class="app-main__inner">
@@ -62,7 +63,11 @@
             <td>{{ $tuition->no_of_students }}</td>
             <td>{{ $tuition->salary }}</td>
             <td>{{ $tuition->location }}</td>
-            <td><button class="btn btn-info btn-sm">Edit</button> <button class="btn btn-danger btn-sm">Delete</button></td>
+            <td> <a href="{{ route('tuition.edit', $tuition->id) }}">
+              <i class="fas fa-edit"></i>
+            </a> <a href="#">
+              <i class="fas fa-trash-alt"></i>
+            </a> </td>
           </tr>
           @endforeach
 

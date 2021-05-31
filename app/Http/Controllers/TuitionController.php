@@ -82,7 +82,7 @@ class TuitionController extends Controller
      */
     public function edit(Tuition $tuition)
     {
-        //
+        return view('backend.pages.edit')->withTui($tuition);
     }
 
     /**
