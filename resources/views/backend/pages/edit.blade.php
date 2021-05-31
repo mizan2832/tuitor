@@ -21,6 +21,7 @@
             <h5 class="card-title"></h5>
             <form 
              action="{{ route('tuition.update', $tui->id) }}"  method="POST" id="needs-validation"   >
+             @method('PUT')
              {{ csrf_field() }}
                 <div class="form-row">
                     <div class="col-md-4 mb-3">

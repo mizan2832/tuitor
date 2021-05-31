@@ -65,9 +65,19 @@
             <td>{{ $tuition->location }}</td>
             <td> <a href="{{ route('tuition.edit', $tuition->id) }}">
               <i class="fas fa-edit"></i>
-            </a> <a href="#">
-              <i class="fas fa-trash-alt"></i>
-            </a> </td>
+            </a> 
+            <a href="{{ route('tuition.index') }}" 
+                   onclick="event.preventDefault();
+                    document.getElementById(
+                      'delete-form-{{$tuition->id}}').submit();">
+                 <i class="fas fa-trash-alt"></i>
+                </a>
+            </td>
+            <form id="delete-form-{{$tuition->id}}" 
+                  + action="{{route('tuition.destroy', $tuition->id)}}"
+                  method="post">
+                @csrf @method('DELETE')
+            </form>
           </tr>
           @endforeach
 

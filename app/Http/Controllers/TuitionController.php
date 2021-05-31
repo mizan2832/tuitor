@@ -94,7 +94,32 @@ class TuitionController extends Controller
      */
     public function update(Request $request, Tuition $tuition)
     {
-        //
+        $validated = $request->validate([
+            'gender' => 'required',
+            'class' => 'required',
+            'subject' => 'required',
+            'preferred_tuition' => 'required',
+            'tuitoring_time' => 'required',
+            'number_of_days' => 'required',
+            'number_of_students' => 'required',
+            'salary' => 'required',
+            'salary' => 'required',
+        ]);
+
+            $tuition = Tuition::find($tuition->id);
+            $tuition->gender = $request->gender;
+            $tuition->class = $request->class;
+            $tuition->medium = $request->medium;
+            $tuition->subject = $request->subject;
+            $tuition->preferred_tuition = $request->preferred_tuition;
+            $tuition->tuitoring_time = $request->tuitoring_time;
+            $tuition->tuitoring_days = $request->number_of_days;
+            $tuition->no_of_students = $request->number_of_students;
+            $tuition->salary = $request->salary;
+            $tuition->location = $request->location;
+
+            $tuition->save();
+            return redirect()->route('tuition.index');
     }
 
     /**
@@ -105,7 +130,8 @@ class TuitionController extends Controller
      */
     public function destroy(Tuition $tuition)
     {
-        //
+        $tuition = Tuition::where('id', $tuition->id)->firstorfail()->delete();
+        return redirect()->route('tuition.index');
     }
 
     // public function getTuitions(Request $request){
