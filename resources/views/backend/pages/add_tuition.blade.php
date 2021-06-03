@@ -83,6 +83,9 @@
                         <input type="text" class="form-control" name="location" value="{{ old('location') }}"id="validationCustom10" placeholder="Location of this tuition" required>
 
                     </div>
+                    <div class="col-md-12">
+                        <textarea name="requirments" style="margin-bottom: 10px;" class="form-control" placeholder="Type Requirements of this tuition.." ></textarea>
+                    </div> 
                 </div>
                
                 <button class="btn btn-primary" type="submit">Submit</button>

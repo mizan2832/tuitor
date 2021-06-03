@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tuition;
 use Illuminate\Http\Request;
-
+use Session;
 class TuitionController extends Controller
 {
     
@@ -14,11 +14,7 @@ class TuitionController extends Controller
         return view('backend.pages.tuition_list')->withAlltuitions($tuitionList);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
        
@@ -26,12 +22,7 @@ class TuitionController extends Controller
         
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -44,6 +35,7 @@ class TuitionController extends Controller
             'number_of_students' => 'required',
             'salary' => 'required',
             'salary' => 'required',
+            'requirments' => 'required',
         ]);
 
             $tuition = new Tuition();
@@ -57,41 +49,25 @@ class TuitionController extends Controller
             $tuition->no_of_students = $request->number_of_students;
             $tuition->salary = $request->salary;
             $tuition->location = $request->location;
+            $tuition->requirments = $request->requirments;
 
             $tuition->save();
             return redirect()->route('tuition.index');
         
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Tuition  $tuition
-     * @return \Illuminate\Http\Response
-     */
     public function show(Tuition $tuition)
     {
-        //
+       
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Tuition  $tuition
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Tuition $tuition)
     {
         return view('backend.pages.edit')->withTui($tuition);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Tuition  $tuition
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Tuition $tuition)
     {
         $validated = $request->validate([
@@ -103,7 +79,8 @@ class TuitionController extends Controller
             'number_of_days' => 'required',
             'number_of_students' => 'required',
             'salary' => 'required',
-            'salary' => 'required',
+            'location' => 'required',
+            'requirments' => 'required',
         ]);
 
             $tuition = Tuition::find($tuition->id);
@@ -117,17 +94,15 @@ class TuitionController extends Controller
             $tuition->no_of_students = $request->number_of_students;
             $tuition->salary = $request->salary;
             $tuition->location = $request->location;
+            $tuition->requirments = $request->requirments;
 
             $tuition->save();
-            return redirect()->route('tuition.index');
+            return redirect()
+                            ->route('tuition.index')
+                            ->with('status', 'Tuition updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Tuition  $tuition
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Tuition $tuition)
     {
         $tuition = Tuition::where('id', $tuition->id)->firstorfail()->delete();

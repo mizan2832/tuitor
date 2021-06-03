@@ -9,34 +9,32 @@
                     <small>Job</small>
                 </h1>
                 <!-- Blog post-->
-                <div class="card mb-2" style="color: black"  >
-                    <div class="card-header">Need a Female Tuitor for A level Student</div>
+                @foreach ($jobs as $job)
+                    <div class="card mb-2" style="color: black"  >
+                    <div class="card-header">Need a {{ $job->gender }} Tuitor for A level Student</div>
                     <div class="card-body" style="line-height:1.6">
                          <div class="row">  
-                                <div class="col-sm-4">Category:Male</div>
-                                <div class="col-sm-4">Class:six</div>
-                                <div class="col-sm-4">Salary:1241</div>
+                                <div class="col-sm-4">Category: {{ $job->gender }}</div>
+                                <div class="col-sm-4">Class: {{ $job->class }}</div>
+                                <div class="col-sm-4">Salary: {{ $job->salary }}</div>
                          </div>
                          <div class="row">  
-                                <div class="col-sm-8">Subjects:Bangla,Math,Physics</div>
-                                <div class="col-sm-4">Duration:5days </div>
+                                <div class="col-sm-4">Subjects: {{ $job->subject }}</div>
+                                <div class="col-sm-4">Duration: {{ $job->tuitoring_days }} </div>
+                                <div class="col-sm-4">Duration: {{ $job->location }} </div>
                                 
                          </div>
-                         <p> Requirements:</p>
-                       <button class="btn btn-success">Details</button>
+                         <p> Requirements:{{ $job->requirments }}</p>
+                      <a href="{{ url('job/details', [$job->id]) }}"> <button class="btn btn-success">Details</button> </a>
                         
                     </div>
                     <div class="card-footer text-muted" style="color: black">
-                        Posted on January 1, 2021 
+                        Posted on {{ $job->created_at }} 
                     </div>
-                </div>
+                </div>    
+            @endforeach
 
-                
-            
-
-             
-                <!-- Blog post-->
-               
+                <!-- Blog post-->             
                 <!-- Pagination-->
                 <ul class="pagination justify-content-center mb-4">
                     <li class="page-item"><a class="page-link" href="#!">← Older</a></li>
