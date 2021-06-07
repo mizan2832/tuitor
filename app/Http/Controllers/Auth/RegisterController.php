@@ -64,10 +64,42 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      
         return User::create([
             'name' => $data['name'],
+            'gender' => $data['gender'],
+            'phone_number' => $data['phone_number'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'institution' => $data['institution'],
+            'subject' => $data['subject'],
+            'qualification' => $data['qualification'],
+            's_medium' => $data['s_medium'],
+            'ssc_year' => $data['ssc_year'],
+            'ssc_institution' => $data['ssc_institution'],
+            'ssc_group' => $data['ssc_group'],
+            'ssc_gpa' => $data['ssc_gpa'],
+            'hsc_year' => $data['hsc_year'],
+            'hsc_institution' => $data['hsc_institution'],
+            'hsc_group' => $data['hsc_group'],
+            'hsc_gpa' => $data['hsc_gpa'],
+            'honours_year' => $data['honours_year'],
+            'honours_institution' => $data['honours_institution'],
+            'honours_subject' => $data['honours_subject'],
+            'honours_gpa' => $data['honours_gpa'],
+            'about_yourself' => $data['about_yourself'],
+            'district' => $data['district'],
+            'preferred_area' => $data['preferred_area'],
+            'medium' => $data['medium'],
+            'preferred_class' => $data['preferred_class'],
+            'preferred_subject' => $data['preferred_subject'],
+            'tuitoring_days' => $data['tuitoring_days'],
+            'shift' => $data['shift'],
+            'salary' => $data['salary'],
+            'tuitoring_style' => $data['tuitoring_style'],
+            'experience' => $data['experience']
+
+
         ]);
     }
 }

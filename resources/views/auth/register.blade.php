@@ -7,48 +7,58 @@
 @section('content')
 <!-- MultiStep Form -->
 <div class="container">
-    <form id="regForm" action="{{url('post-register')}}" method="POST">
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    <form id="regForm" action="{{route('register')}}" method="POST">
         @csrf
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
           <h1>Register As a Tutor</h1>
           <p>Full Name:</p>
-          <input placeholder="Enter your full name"  value="{{ old('user_name') }}"  name="user_name">
+          <input placeholder="Enter your full name"  value="{{ old('name') }}" required  name="name">
             <p>Select Gender</p>           
-             <div class="btn-group">   
-                 <button type="button" value="{{ old('male') }}"  name="male"  value="m" onclick="changeM()" id="male"  class="btn btn-primary male"><i style="display: none;" class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Male</button>  
-                 <button type="button" value="{{ old('female') }}"  name="female"  value="f" onclick="changeF()" id="female"  class="btn btn-primary male"><span><i style="display: none;" class="fas fa-check"></i>&nbsp;&nbsp;&nbsp; Female</button>
-            </div>
+            <select name="gender" id="gender" >
+              <option value="1" disabled>Select Gender</option>
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+            </select>
           <p>Phone Number:</p>
-          <input placeholder="Enter your phone number"  value="{{ old('phone_number') }}"  name="phone_number">
+          <input type="text" placeholder="Enter your phone number"  value="{{ old('phone_number') }}" required  name="phone_number">
           <p>Email Address:</p>
-          <input placeholder="Enter your Email" oninput="this.className = ''" value="{{ old('email') }}"  name="email">
+          <input type="email" placeholder="Enter your Email" oninput="this.className = ''" value="{{ old('email') }}" required  name="email">
           <p>Password:</p>
-          <input placeholder="Enter your password" type="password" oninput="this.className = ''" value="{{ old('password') }}"  name="password">
+          <input placeholder="Enter your password" type="password" oninput="this.className = ''" value="{{ old('password') }}" required  name="password">
       
           <p>Password Confirmation:</p>
-          <input type="password" placeholder="Retype your password"  value="{{ old('password_confirmation') }}"  name="password_confirmation">
+          <input type="password" placeholder="Retype your password"  value="{{ old('password_confirmation') }}" required  name="password_confirmation">
           <h1>Personal Information</h1>
           <div class="row ">
               <div class="col-md-6">
                   <p>Your Current Institution:</p>
-                  <input placeholder="Your current institution"  value="{{ old('institution') }}"  name="institution">
+                  <input placeholder="Your current institution"  value="{{ old('institution') }}" required  name="institution">
               </div>
               <div class="col-md-6">
                   <p>Name of the Subject you are studding on:</p>
-                  <input placeholder="Enter your subject" value="{{ old('subject') }}"  name="subject">
+                  <input placeholder="Enter your subject" value="{{ old('subject') }}" required  name="subject">
               </div>
           </div>
 
           <div class="row ">
               <div class="col-md-6">
                   <p>Your Highest Qualification:</p>
-                  <input placeholder="Enter your qualification" value="{{ old('qualification') }}"  name="qualification">
+                  <input type="text"  placeholder="Enter your qualification" value="{{ old('qualification') }}" required  name="qualification">
               </div>
               <div class="col-md-6">
                   <p>Background Medium:</p>
                   <div class="form-group">
-                    <select class="form-control" id="sel1" value="{{ old('medium') }}"  name="medium">
+                    <select class="form-control" id="sel1" value="{{ old('s_medium') }}" required  name="s_medium">
                       <option value="b">Bangla Medium</option>
                       <option value="e">English Medium</option>
                     </select>
@@ -58,29 +68,29 @@
 
       <label for="pwd">Your SSC/O-level information:</label> <br>
       <div class="row ssc">
-        <div class="col-sm-3"><input type="text" placeholder="Passing Year" value="{{ old('ssc_year') }}"  name="ssc_year"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Institution" value="{{ old('ssc_institution') }}"  name="ssc_institution"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Group" value="{{ old('ssc_group') }}"  name="ssc_group"></div>
-        <div class="col-sm-3"><input type="text" placeholder="GPA" value="{{ old('ssc_gpa') }}"  name="ssc_gpa"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Passing Year" value="{{ old('ssc_year') }}" required  name="ssc_year"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Institution" value="{{ old('ssc_institution') }}" required  name="ssc_institution"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Group" value="{{ old('ssc_group') }}" required  name="ssc_group"></div>
+        <div class="col-sm-3"><input type="text" placeholder="GPA" value="{{ old('ssc_gpa') }}" required  name="ssc_gpa"></div>
       </div>
       <label for="pwd">Your HSC/A-level information:</label><br>
       <div class="row hsc">
-        <div class="col-sm-3"><input type="text" placeholder="Passing Year"  value="{{ old('hsc_year') }}"  name="hsc_year"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Institution"  value="{{ old('hsc_institution') }}"  name="hsc_institution"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Group"  value="{{ old('hsc_group') }}"  name="hsc_group"></div>
-        <div class="col-sm-3"><input type="text" placeholder="GPA"  value="{{ old('hsc_gpa') }}"  name="hsc_gpa"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Passing Year"  value="{{ old('hsc_year') }}" required  name="hsc_year"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Institution"  value="{{ old('hsc_institution') }}" required  name="hsc_institution"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Group"  value="{{ old('hsc_group') }}" required  name="hsc_group"></div>
+        <div class="col-sm-3"><input type="text" placeholder="GPA"  value="{{ old('hsc_gpa') }}" required  name="hsc_gpa"></div>
       </div>
       <label for="pwd">Your Honours information:</label><br>
       <div class="row honours">
-        <div class="col-sm-3"><input type="text" placeholder="Passing Year"  value="{{ old('honours_year') }}"  name="honours_year"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Institution"  value="{{ old('honours_institution') }}"  name="honours_institution"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Subject"  value="{{ old('honours_subject') }}"  name="honours_subject"></div>
-        <div class="col-sm-3"><input type="text" placeholder="Gpa"  value="{{ old('honours_gpa') }}"  name="honours_gpa"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Passing Year"  value="{{ old('honours_year') }}" required  name="honours_year"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Institution"  value="{{ old('honours_institution') }}" required  name="honours_institution"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Subject"  value="{{ old('honours_subject') }}" required  name="honours_subject"></div>
+        <div class="col-sm-3"><input type="text" placeholder="Gpa"  value="{{ old('honours_gpa') }}" required  name="honours_gpa"></div>
       </div>
       <label for="pwd">About Yourself:</label>
       <div class="row">
         <div class="col-sm-12">
-          <textarea value="{{ old('about_yourself') }}"  name="about_yourself" class="form-control" title="Write about yourself"></textarea>
+          <textarea value="{{ old('about_yourself') }}" required  name="about_yourself" class="form-control" title="Write about yourself"></textarea>
        </div>
       </div>
 
@@ -89,7 +99,7 @@
         <div class="col-md-6">
             <p>Districts:</p>
             <div class="form-group">
-              <select class="form-control" value="{{ old('district') }}"  name="district" id="sel1">
+              <select class="form-control" value="{{ old('district') }}" required  name="district" id="sel1">
                 <option>Select Your District:</option>
                 <option value="d">Dhaka</option>
                 <option value="t">Tangail</option>
@@ -100,7 +110,7 @@
         <div class="col-md-6">
           <p>Select your preferred area:</p>
           <div class="form-group">
-            <select class="form-control" value="{{ old('preferred_area') }}"  name="preferred_area" id="sel1">
+            <select class="form-control" value="{{ old('preferred_area') }}" required  name="preferred_area" id="sel1">
               <option>Select Your preferred area:</option>
               <option value="m">Mirpur</option>
               <option value="ada">Adabor</option>
@@ -114,7 +124,7 @@
     <div class="col-md-6">
         <p>Select Medium:</p>
         <div class="form-group">
-          <select class="form-control" value="{{ old('medium') }}"  name="medium" id="sel1">
+          <select class="form-control" value="{{ old('medium') }}" required  name="medium" id="sel1">
             <option value="b">Bangla Medium</option>
             <option value="e">English Medium</option>
             <option value="arbi">Arbi Version</option>
@@ -124,7 +134,7 @@
     <div class="col-md-6">
       <p> Preferred Classes:</p>
       <div class="form-group">
-        <select class="form-control" value="{{ old('preferred_class') }}"  name="preferred_class" id="sel1">
+        <select class="form-control" value="{{ old('preferred_class') }}" required  name="preferred_class" id="sel1">
           <option value="play">Play</option>
           <option value="nursary">Nursary</option>
           <option value="8">class 8</option>
@@ -137,7 +147,7 @@
   <div class="col-md-6">
       <p>Preferred Subjects:</p>
       <div class="form-group">
-        <select class="form-control" value="{{ old('preferred_subject') }}"  name="preferred_subject" id="sel1">
+        <select class="form-control" value="{{ old('preferred_subject') }}" required  name="preferred_subject" id="sel1">
           <option value="english">English</option>
           <option value="bangla">Bangla</option>
           <option value="math">Math</option>
@@ -146,14 +156,14 @@
   </div>
   <div class="col-md-6">
     <p> Day per Week:</p>
-    <input type="number" value="{{ old('tuitoring_days') }}"  name="tuitoring_days" style="height: 40px; margin-top:1px;" required>
+    <input type="number" value="{{ old('tuitoring_days') }}" required  name="tuitoring_days" style="height: 40px; margin-top:1px;" required>
 </div>
 </div>
 <div class="row">
   <div class="col-md-6">
       <p>Timing Shift:</p>
       <div class="form-group">
-        <select class="form-control" value="{{ old('shift') }}"  name="shift" id="sel1">
+        <select class="form-control" value="{{ old('shift') }}" required  name="shift" id="sel1">
           <option value="m">Morning</option>
           <option value="e">Evening</option>
           <option value="a">Afternoon</option>
@@ -164,7 +174,7 @@
     <div class="col-md-6">
       <p> Expected Salary:</p>
     
-        <input type="number" value="{{ old('salary') }}"  name="salary" min="3000" max="20000" style="height: 40px; margin-top:1px;"  required>
+        <input type="number" value="{{ old('salary') }}" required  name="salary" min="3000" max="20000" style="height: 40px; margin-top:1px;"  required>
 
     </div>
 </div>
@@ -172,7 +182,7 @@
     <div class="col-md-12">
         <p>Preferred Tuitoring Style:</p>
         <div class="form-group">
-          <select class="form-control" value="{{ old('tuitoring_style') }}"  name="tuitoring_style" id="sel1">
+          <select class="form-control" value="{{ old('tuitoring_style') }}" required  name="tuitoring_style" id="sel1">
             <option value="fri">Frindly</option>
             <option value="pol">Politely</option>
           </select>
@@ -183,7 +193,7 @@
   <div class="row">
     <div class="col-md-12">
         <p>Experience:</p>
-        <textarea value="{{ old('experience') }}"  name="experience" title="Your Experience" class="form-control"></textarea> 
+        <textarea value="{{ old('experience') }}" required  name="experience" title="Your Experience" class="form-control"></textarea> 
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
   </div>

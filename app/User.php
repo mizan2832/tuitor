@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'is_admin','is_tuitor'
+        'name','gender', 'email', 'password', 'is_admin','is_tuitor','institution','subject','qualification','s_medium','ssc_year','ssc_institution','ssc_group','ssc_gpa','hsc_year','hsc_institution','hsc_group','hsc_gpa','honours_year','honours_institution','honours_subject','honours_gpa','about_yourself','district','preferred_area','medium','preferred_class','preferred_subject','tuitoring_days','shift','salary','tuitoring_style','experience'
     ];
 
     /**

@@ -12,13 +12,13 @@ use App\Tuition;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Auth::routes();
-Route::get('login', 'AuthController@index');
-Route::post('post-login', 'AuthController@postLogin'); 
-Route::get('register', 'AuthController@register');
-Route::post('post-register', 'AuthController@postRegister'); 
-Route::get('dashboard', 'AuthController@dashboard'); 
-Route::get('logout', 'AuthController@logout');
+Auth::routes();
+// Route::get('login', 'AuthController@index');
+// Route::post('post-login', 'AuthController@postLogin'); 
+// Route::get('register', 'AuthController@register');
+// Route::post('post-register', 'AuthController@postRegister'); 
+// Route::get('dashboard', 'AuthController@dashboard'); 
+// Route::get('logout', 'AuthController@logout');
 
 
 Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->middleware('admin');
