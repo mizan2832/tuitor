@@ -23,14 +23,19 @@ Auth::routes();
 
 Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->middleware('admin');
 Route::get('/tuitor', 'HomeController@handleTuitor')->name('tuitor.route')->middleware('tuitor');
-
 Route::get('/', function () {
     return view('front.pages.index');
 })->name('home');
+
+Route::get('/find-tuitor', function () {
+    return view('front.pages.find_tuitor');
+});
+
 Route::get('job', function () {
     $jobs = Tuition::all();
     return view('front.pages.tuition_job')->withJobs($jobs);
 });
+
 Route::middleware(['admin'])->group(function () {
     Route::resource('tuition', 'TuitionController');
 });

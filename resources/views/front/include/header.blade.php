@@ -32,9 +32,9 @@
             <div class="collapse navbar-collapse" id="navbarmain">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Find Tutor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('find-tuitor') }}">Find Tutor</a></li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Premium Tutors</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('job') }}">Tuitions Job</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">How it works</a></li>

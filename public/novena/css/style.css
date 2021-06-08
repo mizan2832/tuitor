@@ -1551,3 +1551,16 @@ a:focus {
     right: 50px;
     ;
 }
+
+.hero-content {
+    position: relative;
+    top: 15%;
+}
+
+#tuitoring_type {
+    height: 45px;
+}
+
+#search_tuitor {
+    margin-left: 30%;
+}

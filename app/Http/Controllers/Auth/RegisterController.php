@@ -8,7 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
+use Auth;
 class RegisterController extends Controller
 {
     /*
@@ -29,15 +29,18 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
+        if (Auth::check() && Auth::user()->is_admin == 1) {
+            return redirect()->route('admin.route');
+        }elseif ( Auth::check() && Auth::user()->is_tutor == 2) {
+            return redirect()->route('tutor.route');
+        }else {
+            $this->redirectTo = url('/');
+        }
+        
         $this->middleware('guest');
     }
 
