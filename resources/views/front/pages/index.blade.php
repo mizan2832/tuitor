@@ -2,14 +2,14 @@
 @section('content')
     <!-- Slider Start -->
     @include('front.include.banner')
-    <section class="features">
+    {{-- <section class="features">
        @include('front.include.worktime')
-    </section>
+    </section> --}}
 
-
+{{-- 
     <section class="section about">
         @include('front.include.about')
-    </section>
+    </section> --}}
 
    
     <section class="section appoinment">

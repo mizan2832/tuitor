@@ -13,14 +13,6 @@ use App\Tuition;
 |
 */
 Auth::routes();
-// Route::get('login', 'AuthController@index');
-// Route::post('post-login', 'AuthController@postLogin'); 
-// Route::get('register', 'AuthController@register');
-// Route::post('post-register', 'AuthController@postRegister'); 
-// Route::get('dashboard', 'AuthController@dashboard'); 
-// Route::get('logout', 'AuthController@logout');
-
-
 Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->middleware('admin');
 Route::get('/tuitor', 'HomeController@handleTuitor')->name('tuitor.route')->middleware('tuitor');
 Route::get('/', function () {

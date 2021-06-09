@@ -6,9 +6,9 @@
                     <div class="divider mb-3"></div>
                     <h1 class="mb-3 mt-3">Your most trusted tuitor provider</h1>
 
-                    <p class="mb-4 pr-5">A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat.</p>
+                    <p class="mb-4 pr-5">Master.com is a faster, easier way to find local and online tutoring services.</p>
                     <div class="btn-container ">
-                        <a href="appoinment.html" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i class="icofont-simple-right ml-2  "></i></a>
+                        <a href="{{ url('find-tuitor') }}" class="btn btn-main-2 btn-icon btn-round-full">Find Your Tuitor <i class="icofont-simple-right ml-2  "></i></a>
                     </div>
                 </div>
             </div>

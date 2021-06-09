@@ -4,7 +4,7 @@
             <div class="appoinment-content">
                 <img src="novena/images/about/img-3.jpg" alt="" class="img-fluid">
                 <div class="emergency">
-                    <h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>+23 345 67980</h2>
+                    <h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>+01515 612832</h2>
                 </div>
             </div>
         </div>
