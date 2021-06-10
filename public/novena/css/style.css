@@ -1564,3 +1564,8 @@ a:focus {
 #search_tuitor {
     margin-left: 30%;
 }
+
+#tuitor_form {
+    margin-left: 15%;
+    margin-right: 15%;
+}
