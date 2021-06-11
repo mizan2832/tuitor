@@ -1568,4 +1568,30 @@ a:focus {
 #tuitor_form {
     margin-left: 15%;
     margin-right: 15%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
+
+#tutoringType {
+    height: 44px;
+    width: 93px;
+}
+
+.button {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+input[value='submit'] {
+    font-size: 1.5em;
+}
+
+
+/* @media only screen and (max-width: 600px) {
+    #tuitor_form {}
+} */
