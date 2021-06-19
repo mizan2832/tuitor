@@ -1565,14 +1565,6 @@ a:focus {
     margin-left: 30%;
 }
 
-#tuitor_form {
-    margin-left: 15%;
-    margin-right: 15%;
-    background-color: #fff;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
 #tutoringType {
     height: 44px;
     width: 93px;
@@ -1591,7 +1583,36 @@ input[value='submit'] {
     font-size: 1.5em;
 }
 
+#tuiTit {
+    margin-top: -50px;
+    text-align: center;
+    color: red;
+}
 
-/* @media only screen and (max-width: 600px) {
-    #tuitor_form {}
-} */
+#tuitor_form h3 {
+    color: blue;
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding: 3px;
+}
+
+#tuitor_form {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 270px) {
+    #tuitor_form {
+        margin-left: 2%;
+        margin-right: 2%;
+        background-color: #fff;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .descTuitor h3 {
+        display: none;
+    }
+}
