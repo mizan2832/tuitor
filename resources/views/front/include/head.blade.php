@@ -6,7 +6,7 @@
     <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
     <meta name="author" content="themefisher.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    @stack('meta')
     <title>We are here to give you a good tuitor for your children.</title>
 
     <!-- Favicon -->

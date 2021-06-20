@@ -27,6 +27,11 @@
                         Add Tuition
                         <i class="metismenu-state-ico"></i>
                     </a>
+                    <a href="{{ route('request.index') }}">
+                        <i class="metismenu-icon pe-7s-diamond"></i>
+                        Request Tuitors
+                        <i class="metismenu-state-ico"></i>
+                    </a>
                     
                 </li>
 

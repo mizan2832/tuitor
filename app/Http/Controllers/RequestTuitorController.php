@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Validator;
 use App\RequestTuitor;
 use Illuminate\Http\Request;
+use Session;
 
 class RequestTuitorController extends Controller
 {
@@ -14,7 +15,8 @@ class RequestTuitorController extends Controller
      */
     public function index()
     {
-        //
+        $req = RequestTuitor::all();
+        return view('backend.requestTuitor')->withReq($req);
     }
 
     /**
@@ -24,7 +26,7 @@ class RequestTuitorController extends Controller
      */
     public function create()
     {
-        //
+        return view('frontend.pages.find_tuitor');
     }
 
     /**
@@ -35,7 +37,38 @@ class RequestTuitorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'location' => 'required',
+            'gender' => 'required',
+            'subject' => 'required',
+            'phoneNumber' => 'required',
+            'salary' => 'required',
+            'tuitoringDays' => 'required',
+            'tuitoringType' => 'required',
+        ]);
+         
+        if ($validator->fails()) {
+
+             Session::flash('error', $validator->messages()->first());
+             return redirect()->back()->withInput();
+        }
+        else{
+            
+            $req = new RequestTuitor();
+            $req->name = $request->name;
+            $req->location = $request->location;
+            $req->gender = $request->gender;
+            $req->subject = $request->subject;
+            $req->phoneNumber = $request->phoneNumber;
+            $req->salary = $request->salary;
+            $req->tuitoringDays = $request->tuitoringDays;
+            $req->tuitoringType = $request->tuitoringType;
+            $req->save();
+            return redirect()->route('request.create')->with('status', 'You have succefully requested for a tuitor! We will help you to meet with a good tuitor.');
+
+        }
+
     }
 
     /**
@@ -82,4 +115,5 @@ class RequestTuitorController extends Controller
     {
         //
     }
+   
 }

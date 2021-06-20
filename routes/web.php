@@ -34,7 +34,7 @@ Route::middleware(['admin'])->group(function () {
 
 Route::get('all_tuition','TuitionController@getTuitions')->name('all_tuition')->middleware('admin');
 
-Route::get('request-tuitor','RequestTuitorController@findTuitors')->name('find-tuitor')->middleware('admin');
+Route::resource('request','RequestTuitorController');
 
 Route::get('/job/details/{id}', function ($id) {
     dd($id);
