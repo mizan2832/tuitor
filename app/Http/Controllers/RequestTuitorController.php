@@ -15,8 +15,8 @@ class RequestTuitorController extends Controller
      */
     public function index()
     {
-        $req = RequestTuitor::all();
-        return view('backend.requestTuitor')->withReq($req);
+
+        return view('front.requestTuitor');
     }
 
     /**
@@ -24,10 +24,6 @@ class RequestTuitorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('frontend.pages.find_tuitor');
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -63,9 +59,9 @@ class RequestTuitorController extends Controller
             $req->phoneNumber = $request->phoneNumber;
             $req->salary = $request->salary;
             $req->tuitoringDays = $request->tuitoringDays;
-            $req->tuitoringType = $request->tuitoringType;
+            $req->tutoringType = $request->tuitoringType;
             $req->save();
-            return redirect()->route('request.create')->with('status', 'You have succefully requested for a tuitor! We will help you to meet with a good tuitor.');
+            return redirect()->route('reqTui')->with('status', 'You have succefully requested for a tuitor! We will help you to meet with a good tuitor.');
 
         }
 

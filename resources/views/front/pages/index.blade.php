@@ -12,9 +12,9 @@
     </section> --}}
 
    
-    <section class="section appoinment">
+    {{-- <section class="section appoinment">
         @include('front.include.appointment')
-    </section>
+    </section> --}}
     <section class="section testimonial-2 gray-bg">
         @include('front.include.testmonial')
     </section>

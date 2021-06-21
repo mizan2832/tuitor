@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 Route::get('/find-tuitor', function () {
     return view('front.pages.find_tuitor');
-});
+})->name('reqTui');
+
 
 Route::get('job', function () {
     $jobs = Tuition::all();

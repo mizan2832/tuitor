@@ -27,13 +27,15 @@ crossorigin="anonymous"></script>
                 </div>
             </div>
         @endif
+        @if(session('error'))
+        <div class="alert alert-error">{{session('error')}}</div>
+        @endif
            <div id="tuitor_form">
                 <h3>Request a tuitor by filling out the form.</h3>
             
                         <form action="{{ route('request.store') }}" method="POST" id="postForm" name="myForm">
                             {{ csrf_field() }}
 
-                            <input type="hidden" id="id_hidden" name="id" />
                             <div class="row col-md-12" style="margin-left: -10px;">
                                 <div class="col-md-6">
                                     <div class="form-group"><label for="studentName" class="">Student Name:</label><input name="name" id="studentName" placeholder="Enter the student name" type="text" class="form-control"></div>
@@ -76,8 +78,8 @@ crossorigin="anonymous"></script>
                                     <div class="position-relative form-group"><label for="tuitoringDays" class="">Tuitoring days in a week:</label><input name="tuitoringDays" id="tuitoringDays" placeholder="Number of days in a week" type="text" class="form-control"></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="position-relative form-group"><label for="tutoringType" class="">Type of tuitoring? </label> <br>
-                                    <select name="tutoringType" id="tutoringType">
+                                    <div class="position-relative form-group"><label for="tuitoringType" class="">Type of tuitoring? </label> <br>
+                                    <select name="tuitoringType" id="tuitoringType">
                                             <option value="offline">Offline</option>
                                             <option value="online">Online</option>
                                     </select>
