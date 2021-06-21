@@ -46,7 +46,7 @@
             <input type="password" placeholder="Retype your password"  value="{{ old('password_confirmation') }}" required  name="password_confirmation">
             <div class="row col-md-12 mt-4">
               <div class="col-md-3 border border-0">
-                  <input type="file" accept="image/*" title=" " onchange="studentProfile(event)">
+                  <input type="file" name="nijerChobi" accept="image/*" title=" " onchange="studentProfile(event)">
               </div>
               <div class="col-md-3">
                   <img style="width:100px;height:100px;position: ;margin-top:-10px;" title=" " class="hidden" id="profile" />
@@ -116,13 +116,13 @@
           </div>
           <div class="row col-md-12 mt-4">
             <div class="col-md-3 border border-0">
-                <input type="file" accept="image/*" title=" " onchange="studentIdCard(event)">
+                <input type="file" name="chatroCard" accept="image/*" title=" " onchange="studentIdCard(event)">
             </div>
             <div class="col-md-3">
                 <img style="width:100px;height:100px;position: ;margin-top:-10px;" title=" " class="hidden" id="idcard" />
             </div>
           <div class="col-md-3 border border-0">
-              <input type="file" accept="image/*" title=" " onchange="nationalIdCard(event)">
+              <input type="file" name="votarCard"  accept="image/*" title=" " onchange="nationalIdCard(event)">
           </div>
           <div class="col-md-3">
               <img style="width:100px;height:100px;position: ;margin-top:-10px;" title=" " class="hidden" id="nationalid" />
