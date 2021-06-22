@@ -21,8 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password'); 
-            $table->boolean('is_admin')->default(1);
-            $table->boolean('is_tuitor')->nullable();
+            $table->integer('role_id')->default(2);
             $table->string('institution');
             $table->string('subject');
             $table->string('qualification');

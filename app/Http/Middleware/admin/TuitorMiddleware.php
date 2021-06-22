@@ -15,7 +15,7 @@ class TuitorMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user()->is_tuitor == 2){
+        if(auth()->user()->role->id == 2){
             return $next($request);
         }
    

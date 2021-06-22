@@ -39,8 +39,10 @@
                     <li class="nav-item"><a class="nav-link" href="{{ url('job') }}">Tuitions Job</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">How it works</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                   @if (Auth::user())
+                   @if (Auth::check() && Auth::user()->role->id == 1)              
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.route') }}">{{ Auth::user()->name }}</a></li>
+                    @elseif(Auth::check() &&Auth::user()->role->id == 2)
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">{{ Auth::user()->name }}</a></li>
                    @else
                     <li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('register') }}">Register</a></li>

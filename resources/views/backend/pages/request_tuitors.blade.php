@@ -53,9 +53,18 @@
           </tr>
         </thead>
         <tbody>
+          @foreach ($requestTui  as $key=>$tuition)           
+          <td>{{ $key+1 }}</td>
+          <td>{{ $tuition->name }}</td>
+          <td>{{ $tuition->location }}</td>
+          <td>{{ $tuition->gender }}</td>
+          <td>{{ $tuition->subject }}</td>
+          <td>{{ $tuition->phoneNumber }}</td>
+          <td>{{ $tuition->salary }}</td>
+          <td>{{ $tuition->tuitoringDays }}</td>
+          <td>{{ $tuition->tutoringType }}</td>
+          @endforeach
 
-
-          
         </tbody>
       </table>
     </div>

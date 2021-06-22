@@ -37,9 +37,9 @@ class RegisterController extends Controller
 
     public function __construct()
     {
-        if (Auth::check() && Auth::user()->is_admin == 1) {
+        if (Auth::check() && Auth::user()->role->id == 1) {
             return redirect()->route('admin.route');
-        }elseif ( Auth::check() && Auth::user()->is_tutor == 2) {
+        }elseif ( Auth::check() && Auth::user()->role->id == 2) {
             return redirect()->route('tutor.route');
         }else {
             $this->redirectTo = url('/');

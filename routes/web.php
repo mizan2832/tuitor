@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Tuition;
+use App\RequestTuitor;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,5 +43,11 @@ Route::get('/job/details/{id}', function ($id) {
     dd($id);
     return view('front.pages.tuition_job')->withJobs($jobs);
 });
+
+Route::get('/requestTuitions', function () {
+
+    $requestTuitions = RequestTuitor::all();
+    return view('backend.pages.request_tuitors')->withRequestTui($requestTuitions);
+})->name('notunTuitions');
 
 

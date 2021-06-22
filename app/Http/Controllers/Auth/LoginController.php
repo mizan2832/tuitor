@@ -55,10 +55,10 @@ class LoginController extends Controller
         ]);
    
         if(auth()->attempt(array('email' => $inputVal['email'], 'password' => $inputVal['password']))){
-            if (Auth::user()->is_admin == 1) {
+            if (Auth::user()->role->id == 1) {
                 return redirect()->route('admin.route');
             }
-            if (Auth::user()->is_tutor == 2) {
+            if (Auth::user()->role->id == 2) {
                 return redirect()->route('tutor.route');
             }
             else{

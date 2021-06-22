@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,29 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $userData = [
-            [
-               'name'=>'Admin',
-               'email'=>'admin@gmail.com',
-                'is_admin'=>'1',
-               'password'=> bcrypt('07070707'),
-            ],
-            [
-               'name'=>'Regular User',
-               'email'=>'reguser@gmail.com',
-                'is_admin'=>'0',
-               'password'=> bcrypt('07070707'),
-            ],
-            [
-               'name'=>'Teacher',
-               'email'=>'teacher@gmail.com',
-                'is_tuitor'=>'2',
-               'password'=> bcrypt('07070707'),
-            ],
-        ];
-  
-        foreach ($userData as $key => $val) {
-            User::create($val);
-        }
+        $this->call([
+	        RoleInfoSeeder::class,
+    	]);
     }
 }

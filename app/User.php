@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','gender', 'email','profile', 'password', 'is_admin','is_tuitor','institution','studentId','subject','nationalId','qualification','s_medium','ssc_year','ssc_institution','ssc_group','ssc_gpa','hsc_year','hsc_institution','hsc_group','hsc_gpa','honours_year','honours_institution','honours_subject','honours_gpa','about_yourself','district','preferred_area','medium','preferred_class','preferred_subject','tuitoring_days','shift','salary','tuitoring_style','experience'
+        'name','gender', 'email','profile', 'password', 'role_id','institution','studentId','subject','nationalId','qualification','s_medium','ssc_year','ssc_institution','ssc_group','ssc_gpa','hsc_year','hsc_institution','hsc_group','hsc_gpa','honours_year','honours_institution','honours_subject','honours_gpa','about_yourself','district','preferred_area','medium','preferred_class','preferred_subject','tuitoring_days','shift','salary','tuitoring_style','experience'
     ];
 
     /**
@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo('App\Role');
+    }
+
 }
