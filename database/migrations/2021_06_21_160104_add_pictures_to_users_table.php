@@ -13,8 +13,10 @@ class AddPicturesToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('user', function (Blueprint $table) {
-            
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('profile')->after('email');
+            $table->string('studentId')->after('institution');
+            $table->string('nationalId')->after('subject');
         });
     }
 
@@ -25,8 +27,10 @@ class AddPicturesToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('user', function (Blueprint $table) {
-            //
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('profile');
+            $table->dropColumn('studentId');
+            $table->dropColumn('nationalId');
         });
     }
 }

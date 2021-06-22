@@ -22,7 +22,7 @@
         </ul>
     </div>
 @endif
-    <form id="regForm" action="{{route('register')}}" method="POST">
+    <form id="regForm" action="{{route('register')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="tab"><h1>Register As a Tutor</h1>
           <!-- One "tab" for each step in the form: -->
