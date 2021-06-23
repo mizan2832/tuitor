@@ -34,8 +34,8 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('find-tuitor') }}">Find Tutor</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">Premium Tutors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('find-tuitor') }}">Find A Tutor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">OUr Tutors</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('job') }}">Tuitions Job</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">How it works</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>

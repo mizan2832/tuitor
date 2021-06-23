@@ -2,9 +2,9 @@
     <div class="row justify-content-center">
         <div class="col-lg-7">
             <div class="section-title text-center">
-                <h2>We served over 5000+ Patients</h2>
+                <h2>We served over 5000+ students.</h2>
                 <div class="divider mx-auto my-4"></div>
-                <p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+                <p>A good tuitor shows you to right path for acheiving success.So we try to provide the best tuitor for you.</p>
             </div>
         </div>
     </div>
@@ -17,12 +17,12 @@
                 <i class="icofont-quote-right"></i>
 
                 <div class="testimonial-thumb">
-                    <img src="novena/images/team/test-thumb1.jpg" alt="" class="img-fluid">
+                    <img src="novena/images/team/final.jpg" alt="" class="img-fluid">
                 </div>
 
                 <div class="client-info ">
                     <h4>Amazing service!</h4>
-                    <span>John Partho</span>
+                    <span>Mizanur Rahman</span>
                     <p>
                         They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
                     </p>
@@ -31,12 +31,12 @@
 
             <div class="testimonial-block style-2  gray-bg">
                 <div class="testimonial-thumb">
-                    <img src="novena/images/team/test-thumb2.jpg" alt="" class="img-fluid">
+                    <img src="novena/images/team/mitu_hijab.jpg" alt="" class="img-fluid">
                 </div>
 
                 <div class="client-info">
-                    <h4>Expert doctors!</h4>
-                    <span>Mullar Sarth</span>
+                    <h4>Expert teachers!</h4>
+                    <span>Farjana Akter Mitu</span>
                     <p>
                         They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
                     </p>
@@ -46,19 +46,34 @@
             </div>
 
             <div class="testimonial-block style-2  gray-bg">
+                <i class="icofont-quote-right"></i>
+
                 <div class="testimonial-thumb">
-                    <img src="novena/images/team/test-thumb3.jpg" alt="" class="img-fluid">
+                    <img src="novena/images/team/final.jpg" alt="" class="img-fluid">
                 </div>
 
-                <div class="client-info">
-                    <h4>Good Support!</h4>
-                    <span>Kolis Mullar</span>
+                <div class="client-info ">
+                    <h4>Amazing service!</h4>
+                    <span>Mizanur Rahman</span>
                     <p>
                         They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
                     </p>
                 </div>
-
+            </div>
+            <div class="testimonial-block style-2  gray-bg">
                 <i class="icofont-quote-right"></i>
+
+                <div class="testimonial-thumb">
+                    <img src="novena/images/team/final.jpg" alt="" class="img-fluid">
+                </div>
+
+                <div class="client-info ">
+                    <h4>Amazing service!</h4>
+                    <span>Mizanur Rahman</span>
+                    <p>
+                        They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+                    </p>
+                </div>
             </div>
 
             <div class="testimonial-block style-2  gray-bg">
@@ -76,20 +91,7 @@
                 <i class="icofont-quote-right"></i>
             </div>
 
-            <div class="testimonial-block style-2  gray-bg">
-                <div class="testimonial-thumb">
-                    <img src="novena/images/team/test-thumb1.jpg" alt="" class="img-fluid">
-                </div>
-
-                <div class="client-info">
-                    <h4>Modern Service!</h4>
-                    <span>Kolis Mullar</span>
-                    <p>
-                        They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-                    </p>
-                </div>
-                <i class="icofont-quote-right"></i>
-            </div>
+         
         </div>
     </div>
 </div>

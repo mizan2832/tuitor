@@ -10,16 +10,16 @@
     <title>We are here to give you a good tuitor for your children.</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="novena//novena/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href=" {{ asset('novena//novena/images/favicon.ico') }} " />
 
     <!-- bootstrap.min css -->
-    <link rel="stylesheet" href="novena/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" {{ asset('novena/plugins/bootstrap/css/bootstrap.min.css') }} ">
     <!-- Icon Font Css -->
-    <link rel="stylesheet" href="novena/plugins/icofont/icofont.min.css">
+    <link rel="stylesheet" href=" {{ asset('novena/plugins/icofont/icofont.min.css') }}">
     <!-- Slick Slider  CSS -->
-    <link rel="stylesheet" href="novena/plugins/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="novena/plugins/slick-carousel/slick/slick-theme.css">
-    <link rel="stylesheet" href="novena/css/style.css">
+    <link rel="stylesheet" href=" {{ asset('novena/plugins/slick-carousel/slick/slick.css') }} ">
+    <link rel="stylesheet" href=" {{ asset('novena/plugins/slick-carousel/slick/slick-theme.css') }} ">
+    <link rel="stylesheet" href=" {{ asset('novena/css/style.css') }} ">
      @stack('css')
 
 

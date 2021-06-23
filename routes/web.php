@@ -40,14 +40,14 @@ Route::get('all_tuition','TuitionController@getTuitions')->name('all_tuition')->
 Route::resource('request','RequestTuitorController');
 
 Route::get('/job/details/{id}', function ($id) {
-    dd($id);
-    return view('front.pages.tuition_job')->withJobs($jobs);
+    $details = Tuition::find($id);
+    return view('front.pages.details')->withDetails($details);
 });
 
-Route::get('/requestTuitions', function () {
+Route::get('requestTuitions', function () {
 
     $requestTuitions = RequestTuitor::all();
     return view('backend.pages.request_tuitors')->withRequestTui($requestTuitions);
-})->name('notunTuitions');
+});
 
 

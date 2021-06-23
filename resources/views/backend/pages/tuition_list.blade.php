@@ -90,36 +90,5 @@
         </tbody>
       </table>
     </div>
-
-    
-   
-
 </div>
 @endsection
-{{-- @push('script')
-<script type="text/javascript">
-    $(document).ready(function(){
-
-      // DataTable
-      $('#tuitionTable').DataTable({
-         processing: true,
-         serverSide: true,
-         ajax: "{{route('all_tuition')}}",
-         columns: [
-            { data: 'id' },
-            { data: 'gender' },
-            { data: 'class' },
-            { data: 'medium' },
-            { data: 'subject' },
-            { data: 'preferred_tuition' },
-            { data: 'tuitoring_time' },
-            { data: 'tuitoring_days' },
-            { data: 'no_of_students' },
-            { data: 'salary' },
-            { data: 'location' },
-         ]
-      });
-
-    });
-    </script>
-@endpush --}}
