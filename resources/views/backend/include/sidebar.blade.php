@@ -27,7 +27,7 @@
                         Add Tuition
                         <i class="metismenu-state-ico"></i>
                     </a>
-                    <a href="{{ route('notunTuitions') }}">
+                    <a href="{{ url('requestTuitions') }}">
                         <i class="metismenu-icon pe-7s-diamond"></i>
                         Request Tuitors
                         <i class="metismenu-state-ico"></i>

@@ -1616,3 +1616,13 @@ input[value='submit'] {
         display: none;
     }
 }
+
+.aboutTuitor p {
+    line-height: 1.4em;
+    color: black;
+}
+
+.aboutTuitor span {
+    font-weight: 700;
+    font-size: 1.2em;
+}

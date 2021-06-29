@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Tuition;
+use App\User;
 use App\RequestTuitor;
 
 /*
@@ -50,4 +51,10 @@ Route::get('requestTuitions', function () {
     return view('backend.pages.request_tuitors')->withRequestTui($requestTuitions);
 });
 
+Route::get('our-tuitors',function(){
+    $tuitorList = DB::table('users')
+                ->where('role_id', '=', 2)
+                ->get();
+    return view('front.pages.tuitor_list')->withtuitorList($tuitorList);
+})->name('tuitor_list');
 
