@@ -58,3 +58,10 @@ Route::get('our-tuitors',function(){
     return view('front.pages.tuitor_list')->withtuitorList($tuitorList);
 })->name('tuitor_list');
 
+Route::get('teacher/details/{id}',function($id){
+    $tuitorDetails = DB::table('users')
+                ->where('id', '=', $id)
+                ->first();
+    return view('front.pages.tuitorDetails')->withTuitorDetails($tuitorDetails);
+})->name('about_tuitor');
+

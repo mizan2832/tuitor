@@ -11,9 +11,11 @@
                 <p><span> Interested Subjects:</span>{{ $tuitor->subject}}</p>
                 <p><span>Location:</span> {{ $tuitor->district }}</p>
                 <p>Graduated from <span>{{ $tuitor->institution }}</span> with a  </p>
-                <button class="btn btn-success" type="submit">Details</button>
+                <a href="{{ route('about_tuitor', ['id'=>$tuitor->id]) }}" class="btn btn-success">Details</a>
             </div>
         </div>
         @endforeach
+       
+          
     </div>
 @endsection

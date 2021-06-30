@@ -1626,3 +1626,40 @@ input[value='submit'] {
     font-weight: 700;
     font-size: 1.2em;
 }
+
+.modal-dialog {
+    width: 100% !important;
+}
+
+.table-header {
+    border-radius: 8%;
+    background-color: #6F8BA4;
+    color: #fff;
+}
+
+.edu-table {
+    text-align: center;
+}
+
+.edu-table .fit {
+    width: 1px;
+    white-space: nowrap;
+}
+
+.studentcard {
+    position: absolute;
+    bottom: 177px;
+    right: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nationalcard {
+    position: absolute;
+    bottom: 177px;
+    right: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
