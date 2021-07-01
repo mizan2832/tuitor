@@ -76,18 +76,12 @@
         <div class="row col-sm-12 col-md-12 justify-content-md-center">
           <div class="col-sm-6 col-md-6">
             <img width="100%" height="50%" src="{{ asset('images/nijerchobi/') }}/{{$tuitorDetails->studentId}}" alt="">
-            <div class="studentcard">
-              <h4>Student Card</h4>
-            </div>
-
           </div>
           <div class="col-sm-6 col-md-6">
             <img width="100%" height="50%" src="{{ asset('images/nijerchobi/') }}/{{$tuitorDetails->nationalId}}" alt="">
-            <div class="nationalcard">
-              <h4>National Id</h4>
-            </div>
           </div>
         </div>
+      
 
     </div>
 @endsection

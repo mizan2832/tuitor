@@ -65,3 +65,7 @@ Route::get('teacher/details/{id}',function($id){
     return view('front.pages.tuitorDetails')->withTuitorDetails($tuitorDetails);
 })->name('about_tuitor');
 
+Route::get('contact',function(){
+    return view('front.pages.contact');
+})->name('contact');
+

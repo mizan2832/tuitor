@@ -38,7 +38,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('tuitor_list') }}">Our Tutors</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('job') }}">Tuitions Job</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                    @if (Auth::check() && Auth::user()->role->id == 1)              
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.route') }}">{{ Auth::user()->name }}</a></li>
                     @elseif(Auth::check() &&Auth::user()->role->id == 2)

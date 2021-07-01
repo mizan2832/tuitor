@@ -253,7 +253,7 @@ input[type="tel"]:focus {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 26px 0;
 }
 
 .section-sm {
@@ -1063,7 +1063,7 @@ a:focus {
 .contact-block {
     text-align: center;
     border: 5px solid #EEF2F6;
-    padding: 50px 25px;
+    padding: 16x 37px;
 }
 
 .contact-block i {
@@ -1644,22 +1644,4 @@ input[value='submit'] {
 .edu-table .fit {
     width: 1px;
     white-space: nowrap;
-}
-
-.studentcard {
-    position: absolute;
-    bottom: 177px;
-    right: 20px;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.nationalcard {
-    position: absolute;
-    bottom: 177px;
-    right: 20px;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
 }
