@@ -1,5 +1,11 @@
 @extends('front.master')
 @section('content')
+@if (session('success'))
+          <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              {{ session('success') }}
+          </div>
+      @endif
 <section class="section contact-info pb-0">
     <div class="container">
          <div class="row">
@@ -43,7 +49,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <form id="contact-form" class="contact__form " method="post" action="mail.php">
+                <form id="contact-form" class="contact__form " method="POST" action="{{ url('contact-us') }}">
+                    {{ csrf_field() }}
+
                  <!-- form message -->
                     <div class="row">
                         <div class="col-12">
@@ -82,7 +90,8 @@
                     </div>
 
                     <div class="text-center">
-                        <input class="btn btn-main btn-round-full" name="submit" type="submit" value="Send Messege"></input>
+                        <button class="btn btn-main btn-round-full" name="submit" type="submit" value="Send Messege">Send Meassage</button>
+                      
                     </div>
                 </form>
             </div>

@@ -64,8 +64,6 @@ Route::get('teacher/details/{id}',function($id){
                 ->first();
     return view('front.pages.tuitorDetails')->withTuitorDetails($tuitorDetails);
 })->name('about_tuitor');
-
-Route::get('contact',function(){
-    return view('front.pages.contact');
-})->name('contact');
+Route::get('contact','ContactController@index')->name('contact') ;
+Route::any('contact-us','ContactController@sendEmail');
 
