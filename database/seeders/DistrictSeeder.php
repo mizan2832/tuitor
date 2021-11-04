@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
 class DistrictSeeder extends Seeder
@@ -86,6 +88,6 @@ class DistrictSeeder extends Seeder
             ['id' => '72', 'division_id' => '6', 'name' => 'Gazipur Metro', 'bn_name' => 'গাজীপুর মেট্রো', 'lat' => '23.4682747', 'lon' => '91.1788135', 'url' => 'www.aa.gov.bd'],
         ];
 
-        DB::table('districts')->insert($districts);
+        \DB::table('districts')->insert($districts);
     }
 }

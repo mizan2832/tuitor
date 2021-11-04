@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+namespace Database\Seeders;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,7 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-	        RoleInfoSeeder::class,
+	        UnionSeeder::class,
+	        DivisionSeeder::class,
     	]);
+
+        
+
     }
 }
