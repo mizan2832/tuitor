@@ -52,6 +52,7 @@ Route::get('requestTuitions', function () {
 });
 
 Route::get('our-tuitors',function(){
+    
     $tuitorList = DB::table('users')
                 ->where('role_id', '=', 2)
                 ->get();

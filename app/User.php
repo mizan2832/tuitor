@@ -42,4 +42,17 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     }
 
+    public function mediums()
+    {
+        return $this->hasMany(medium_user::class);
+    }
+    public function tuitor_subjects()
+    {
+        return $this->hasMany(tuitor_subject::class);
+    }
+    public function preferred_subjects()
+    {
+        return $this->hasMany(Preferred_class_tuitor::class);
+    }
+
 }
