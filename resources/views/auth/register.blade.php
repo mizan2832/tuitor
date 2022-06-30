@@ -167,7 +167,7 @@
                 <div class="col-md-6">
                     <p>Select Medium:</p>
                     <div class="form-group">
-                        <select class="form-control" value="{{ old('medium') }}" required name="medium" id="sel1">
+                        <select class="form-control select2" value="{{ old('medium') }}" required name="medium[]" multiple="multiple" id="sel1">
                         <option value="b">Bangla Medium</option>
                         <option value="e">English Medium</option>
                         <option value="arbi">Arbi Version</option>
@@ -177,7 +177,7 @@
                 <div class="col-md-6">
                     <p> Preferred Classes:</p>
                     <div class="form-group">
-                        <select class="form-control" value="{{ old('preferred_class') }}" required name="preferred_class" id="sel1">
+                        <select class="form-control select2" value="{{ old('preferred_class') }}" required name="preferred_class[]" multiple="multiple" id="sel1">
                           <option value="play">Play</option>
                           <option value="nursary">Nursary</option>
                           <option value="8">class 8</option>
@@ -190,7 +190,7 @@
                 <div class="col-md-6">
                     <p>Preferred Subjects:</p>
                     <div class="form-group">
-                        <select class="form-control" value="{{ old('preferred_subject') }}" required name="preferred_subject" id="sel1">
+                        <select class="form-control select2" value="{{ old('preferred_subject') }}" required name="preferred_subject[]" multiple="multiple" id="sel1">
                         <option value="english">English</option>
                         <option value="bangla">Bangla</option>
                         <option value="math">Math</option>
@@ -373,4 +373,18 @@ function readURL(input) {
         readURL(this);
     });
     </script>
-@endpush ()           
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        
+  <script>
+    $(document).ready(function() {
+        // Select2 Multiple
+        $('.select2').select2({
+            placeholder: "Select",
+            allowClear: true
+        });
+
+    });
+
+  </script>
+@endpush       
